@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* 画像エリア */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-bottom: 1px solid #eaeaea; /* 画像の下に薄い境界線 */
+}
+
+.top-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('bbq.png'); /* 画像のパスを確認してください */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.container:hover .top-image {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+/* コンテンツエリアのグラデーションを強制適用 */
+.content {
+    padding: 30px 40px 50px;
+    text-align: center;
+    position: relative;
+    background-image: linear-gradient(180deg, #f5f5f5 0%, #ffffff 80px) !important;
+}
+
+.title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: #333;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #6a8d73, #a4c3b2);
+    border-radius: 3px;
+}
+
+.accent {
+    font-size: 2.5rem;
+    vertical-align: middle;
+    color: #6a8d73;
+}
+
+.rotate-text {
+    display: inline-block;
+    transform: rotate(15deg);
+    position: relative;
+    top: -5px;
+}
+
+.date-section {
+    margin: 40px 0;
+    position: relative;
+}
+
+.date-badge {
+    background: linear-gradient(135deg, #4180b0, #8ddad8);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 10px 25px;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(40, 152, 137, 0.3);
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.catchphrase {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 40px 0;
+    color: #333;
+    position: relative;
+    padding: 15px 0;
+}
+
+.catchphrase::before, .catchphrase::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.catchphrase::before {
+    top: 0;
+}
+
+.catchphrase::after {
+    bottom: 0;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 40px 0;
+    gap: 30px;
+}
+
+.info-card {
+    width: 48%;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.label {
+    display: inline-block;
+    font-weight: 700;
+    color: #333;
+    margin-right: 8px;
+    position: relative;
+}
+
+.label::after {
+    content: '/';
+    margin-left: 8px;
+    color: #6a8d73;
+}
+
+.sub-info {
+    display: block;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.venue-link {
+    color: #6a8d73;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.venue-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #6a8d73;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.venue-link:hover {
+    color: #4d6b54;
+}
+
+.venue-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #6a8d73, #a4c3b2);
+    border-radius: 3px;
+}
+
+.footer-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-text-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.footer-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .container {
+        margin: 15px;
+        width: auto;
+        border-radius: 8px;
+    }
+    
+    .image-container {
+        height: 250px;
+    }
+    
+    .content {
+        padding: 25px 20px 40px;
+    }
+    
+    .title {
+        font-size: 2.8rem;
+    }
+    
+    .date-badge {
+        font-size: 1.1rem;
+        padding: 8px 20px;
+    }
+    
+    .time {
+        font-size: 1.2rem;
+    }
+    
+    .catchphrase {
+        font-size: 1.4rem;
+    }
+    
+    .info-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .info-card {
+        width: 100%;
+    }
+    
+    .footer-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.3rem;
+    }
+    
+    .accent {
+        font-size: 1.8rem;
+    }
+    
+    .catchphrase {
+        font-size: 1.1rem;
+    }
+    
+    .footer-title {
+        font-size: 1.2rem;
+    }
+}

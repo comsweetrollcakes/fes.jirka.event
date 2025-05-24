@@ -270,6 +270,74 @@ body {
     font-weight: 300;
 }
 
+.access-links-container {
+    display: flex; /* 横並びに配置 */
+    justify-content: center; /* 中央揃え */
+    gap: 20px; /* ボタン間のスペース */
+    margin: 30px 0; /* 上下のマージン */
+}
+
+.access-button {
+    display: inline-flex; /* アイコンとテキストを横並びにするため */
+    align-items: center; /* アイコンとテキストを中央揃え */
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* アイコンの位置調整のため */
+    overflow: hidden; /* ホバーエフェクトのため */
+}
+
+.access-button .button-icon {
+    margin-right: 8px;
+    display: inline-block;
+    width: 20px; /* アイコンサイズ */
+    height: 20px; /* アイコンサイズ */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 各ボタンの色とアイコン */
+.access-button.tenjin {
+    background-color: #5D9CEC; /* 天神ボタンのベースカラー */
+}
+
+.access-button.tenjin .button-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>'); /* マップピンアイコン (白) */
+}
+
+.access-button.hakata {
+    background-color: #64B5F6; /* 博多ボタンのベースカラー */
+}
+
+.access-button.hakata .button-icon {
+     background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>'); /* マップピンアイコン (白) */
+}
+
+/* ホバーエフェクト */
+.access-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.access-button.tenjin:hover {
+    background-color: #4A89DC; /* 天神ボタンのホバーカラー */
+}
+
+.access-button.hakata:hover {
+    background-color: #4FC3F7; /* 博多ボタンのホバーカラー */
+}
+
+/* ボタン内のテキストの改行を防ぐ */
+.access-button br {
+    display: none;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .container {
@@ -333,4 +401,20 @@ body {
     .footer-title {
         font-size: 1.2rem;
     }
+
+    .access-links-container {
+        flex-direction: column; /* 縦並びに変更 */
+        align-items: center; /* 中央揃え */
+    }
+    .access-button {
+        width: 80%; /* ボタンの幅を調整 */
+        justify-content: center; /* テキストとアイコンを中央に */
+        margin-bottom: 10px; /* ボタン間のマージン */
+    }
+    .access-links-container a:last-child {
+        margin-bottom: 0; /* 最後のボタンの下マージンを削除 */
+    }
 }
+
+
+

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>のこジルBBQ & フェス！アクセスガイド🎶</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary-font: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            --header-bg-start: #2C3E50; /* Sunset orange - light */
+            --header-bg-end: #34495E;   /* Sunset orange - dark */
+            --header-text: #ffffff;
+            --accent-color: #3498DB; /* Deep Orange */
+            --accent-color-light: #5DADE2 ; /* Orange */
+            --secondary-accent-color: #2980B9 ; /* Teal */
+            --background-color: #ECF0F1 ; /* Very light grey */
+            --container-bg: #ffffff;
+            --text-color: #34495E; /* Darker grey for text */
+            --heading-color: #2C3E50; /* Dark blue-grey for headings */
+            --border-color: #BDC3C7; /* Light grey for borders */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --time-info-bg: #EBF5FB; /* Light Orange */
+            --time-info-border: #f57c00;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-text-size-adjust: 100%; /* Prevent iOS font scaling */
+            -webkit-font-smoothing: antialiased; /* Smoother fonts on WebKit */
+            -moz-osx-font-smoothing: grayscale; /* Smoother fonts on Firefox */
+            overflow-wrap: break-word; /* Break long words to prevent overflow */
+            word-wrap: break-word; /* Legacy support */
+        }
+        .header-banner {
+            background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+            color: var(--header-text);
+            padding: 50px 20px; /* Adjusted padding */
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+        .header-banner h1 {
+            margin: 0;
+            font-size: 2.0em; /* Adjusted for general readability */
+            font-weight: 700;
+            line-height: 1.3;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .header-banner p {
+            font-size: 1.00em; /* Adjusted */
+            margin-top: 10px;
+            opacity: 0.9;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        .event-time {
+            font-size: 0.95em; /* Adjusted */
+            font-weight: 500;
+            background-color: rgba(0,0,0,0.15);
+            padding: 8px 18px; /* Adjusted */
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 15px; /* Adjusted */
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto; /* Adjusted */
+            padding: 25px;   /* Adjusted */
+            background-color: var(--container-bg);
+            border-radius: 12px;
+            box-shadow: 0 12px 30px var(--shadow-color);
+        }
+        h2 {
+            color: var(--heading-color);
+            font-size: 1.9em; /* Adjusted */
+            font-weight: 700;
+            margin-top: 40px; /* Adjusted */
+            margin-bottom: 20px; /* Adjusted */
+            padding-bottom: 12px; /* Adjusted */
+            border-bottom: 2px solid var(--accent-color-light);
+            display: flex;
+            align-items: center;
+            line-height: 1.4;
+        }
+        h2 .emoji {
+            font-size: 1.2em; /* Adjusted */
+            margin-right: 12px; /* Adjusted */
+            color: var(--accent-color);
+        }
+        .step {
+            background-color: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--accent-color);
+            padding: 20px; /* Adjusted */
+            margin-bottom: 25px; /* Adjusted */
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .step p, .step li {
+            font-size: 1.0em; /* Adjusted for base readability */
+            font-weight: 400;
+            line-height: 1.65; /* Increased line height */
+        }
+        .step ul {
+            list-style-type: none;
+            padding-left: 10px; /* Adjusted */
+        }
+        .step li {
+            padding: 10px 0; /* Adjusted */
+            border-bottom: 1px dashed #efefef;
+            display: flex;
+            align-items: flex-start; /* Align items to start for better wrapping */
+        }
+        .step li:last-child {
+            border-bottom: none;
+        }
+        .step .emoji {
+            margin-right: 8px; /* Adjusted */
+            font-size: 1.2em; /* Adjusted */
+            color: var(--secondary-accent-color);
+            line-height: 1.65; /* Match text line height */
+        }
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        .time-info, .note {
+            padding: 18px; /* Adjusted */
+            margin-top: 18px; /* Adjusted */
+            border-radius: 8px;
+            font-size: 0.95em; /* Adjusted */
+            border-left-width: 4px;
+            border-left-style: solid;
+            line-height: 1.6; /* Increased line height */
+        }
+        .time-info {
+            background-color: var(--time-info-bg);
+            border-left-color: var(--time-info-border);
+        }
+        .time-info strong {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        .time-info ul {
+            list-style-type: none;
+            padding-left: 5px;
+            margin-top: 8px; /* Adjusted */
+        }
+        .time-info li {
+            font-size: 0.92em; /* Adjusted */
+            padding: 5px 0; /* Adjusted */
+            border-bottom: none;
+            display: flex;
+            align-items: flex-start; /* Align items to start */
+        }
+        .time-info li .emoji {
+            font-size: 1.1em; /* Adjusted */
+            margin-right: 6px; /* Adjusted */
+            color: var(--time-info-border);
+            line-height: 1.6; /* Match text line height */
+        }
+        .time-info li .bus-system {
+            font-weight: normal;
+            color: var(--text-color);
+            margin-left: 0.25em;
+        }
+        .note {
+            background-color: var(--note-bg);
+            border-left-color: var(--note-border);
+        }
+        .note .emoji {
+            font-size: 1.1em; /* Adjusted */
+            color: var(--note-border);
+        }
+        .note strong, .note .highlight {
+            color: var(--note-border);
+            font-weight: 700;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: var(--header-bg-end);
+            text-decoration: underline;
+        }
+        .final-message {
+            text-align: center;
+            padding: 35px 25px; /* Adjusted */
+            background: linear-gradient(135deg, var(--secondary-accent-color) 0%, #004d40 100%);
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px; /* Adjusted */
+        }
+        .final-message p {
+            font-size: 1.15em; /* Adjusted */
+            margin: 0;
+            font-weight: 400;
+            line-height: 1.65; /* Increased line height */
+        }
+        .final-message .emoji-large {
+            font-size: 2.8em; /* Adjusted */
+            display: block;
+            margin-bottom: 18px; /* Adjusted */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px; /* Adjusted */
+            padding-bottom: 25px; /* Adjusted */
+            font-size: 0.88em; /* Adjusted */
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design for iPhone 12 (390px width) and similar */
+        @media (max-width: 480px) {
+            .header-banner {
+                padding: 30px 15px; /* Narrower padding */
+            }
+            .header-banner h1 {
+                font-size: 1.25em; /* Smaller for narrow screens */
+                line-height: 1.3;
+            }
+            .header-banner p {
+                font-size: 1.0em; /* Smaller */
+                line-height: 1.5;
+            }
+            .event-time {
+                font-size: 0.9em;
+                padding: 6px 12px;
+                margin-top: 12px;
+            }
+            .container {
+                margin: 20px 10px; /* Reduce side margins */
+                padding: 20px 10px; /* Adjust container padding */
+            }
+            h2 {
+                font-size: 1.4em; /* Smaller for narrow screens */
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+                line-height: 1.4;
+            }
+            h2 .emoji {
+                font-size: 1.1em;
+                margin-right: 8px;
+            }
+            .step {
+                padding: 15px 10px; /* Adjust step padding */
+                margin-bottom: 20px;
+            }
+            .step p, .step li {
+                font-size: 0.9em; /* Slightly reduce font size in steps */
+                line-height: 1.6; /* Ensure good line height */
+            }
+             .step ul {
+                padding-left: 5px;
+            }
+            .step li .emoji {
+                font-size: 1.1em;
+                margin-right: 6px;
+                flex-shrink: 0; /* Prevent emoji from shrinking */
+            }
+            .time-info, .note {
+                padding: 12px; /* Adjust padding for info boxes */
+                font-size: 0.9em; /* Smaller */
+                line-height: 1.55;
+                margin-top: 15px;
+            }
+            .time-info li {
+                font-size: 0.9em; /* Consistent with parent */
+                padding: 4px 0;
+            }
+             .time-info li .emoji {
+                font-size: 1.0em;
+                margin-right: 5px;
+                flex-shrink: 0;
+            }
+            .final-message {
+                padding: 25px 15px;
+                margin-top: 30px;
+            }
+            .final-message p {
+                font-size: 1.0em; /* Adjust final message font size */
+                line-height: 1.6;
+            }
+            .final-message .emoji-large {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+            .footer p {
+                font-size: 0.85em;
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <h1><span class="emoji">🎉</span>のこジルBBQ&フェス！<span class="emoji">🎸</span></h1>
+        <p>音楽と酒を景色で過ごすためのアクセスガイド</p>
+        <p class="event-time"><span class="emoji">🗓️</span> イベント開始: 15:30 <span class="emoji">📍</span> ノコズオーシャン</p>
+    </div>
+
+    <div class="container">
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px; font-weight: 400; line-height: 1.6;">
+            「<span class="highlight">のこジルBBQ & フェス</span>」へようこそ！<br><br>
+            15:30の会場までのステップをご紹介。<br>
+            余裕を持って楽しいBBQフェス体験！🚀
+        </p>
+
+        <h2><span class="emoji">🚌</span> STEP1: 天神～姪浜渡船場へ！</h2>
+        <div class="step">
+            <p><span class="emoji">📍</span> まずは、天神からスタート！</p>
+            <p><span class="emoji">💨</span> 「<span class="highlight">姪浜渡船場（のこのしま渡船場）</span>」へ</p>
+            <p><span class="emoji">🚌</span> 西鉄バスに乗って、レッツゴー！</p>
+            <ul>
+                <li><span class="emoji">➡️</span><span class="highlight">天神高速バスターミナル前<br></span><span class="highlight">　1A</span> から乗車。</li>
+                <li><span class="emoji">➡️</span><span class="highlight">300番 301番<br> 302番 304番</span>に乗車「<span class="highlight">能古渡船場</span>」で下車。</li>
+                <li><span class="emoji">⏱️</span> 所要時間は約30分～40分です。<br>（交通状況により変動します）</li>
+            </ul>
+            <div class="time-info">
+                <p><span class="emoji">🕒</span> <strong>15:15発のフェリーに間に合うには… </br>(日祝ダイヤの推奨バス時刻)</strong></p>
+                <p>姪浜渡船場に <span class="highlight">15:00まで</span> に到着がおすすめ<br>（15:15発のフェリーに乗るため）
+                <ul>
+                    <li><span class="emoji">🚌</span> <strong>😇13:50</strong><span class="bus-system">300番</span> → 能古渡船場 14:24頃着予定</li>
+                    <li><span class="emoji">🚌</span> <strong>😇14:00</strong><span class="bus-system">301番</span> → 能古渡船場 14:37頃着予定</li>
+                    <li><span class="emoji">🚌</span> <strong>😊14:05</strong><span class="bus-system">300番</span> → 能古渡船場 14:39頃着予定</li>
+                    <li><span class="emoji">🚌</span> <strong>😊14:10</strong><span class="bus-system">302番</span> → 能古渡船場 14:41頃着予定</li>
+                    <li><span class="emoji">🚌</span> <strong>😥14:20</strong><span class="bus-system">300番</span> → 能古渡船場 14:54頃着予定</li>
+                    <li><a href="https://jik.nishitetsu.jp/" target="_blank">にしてつ時刻表</a></li>
+                    <li><span class="emoji">💰</span><span class="highlight">運賃：約430円</span></p></li>
+                </ul>
+                <p>これらのバスにご乗車いただければ、15:15発のフェリーに間に合うと思います。</p>
+            </div>
+        </div>
+
+        <h2><span class="emoji">⛴️</span> STEP2:フェリーで能古島へ！</h2>
+        <div class="step">
+            <p><span class="emoji">🌊</span> 姪浜渡船場に着いたら、いよいよフェリーに乗船です！</p>
+            <p><span class="emoji">🎫</span> 乗船券を購入しましょう。</p>
+            <ul>
+                <li><span class="emoji">👤</span> 大人：<span class="highlight">230円</span> (片道)　往復もあります</li>
+                <li><span class="emoji">🧒</span> 小人：<span class="highlight">120円</span> (片道)　往復もあります</li>
+            </ul>
+            <p><span class="emoji">🚢</span> フェリー「<span class="highlight">レインボーのこ</span>」に乗って</br>約10分の船旅を楽しみましょう！</p>
+            <div class="time-info">
+                <p><span class="emoji">🕒</span> <strong>15:30のイベント開始に間に合うには…</strong></p>
+                <p>姪浜渡船場からは <span class="highlight">15:15発</span> のフェリーに乗船することを目指しましょう。<br>この便を逃すと次は16:15発となり、イベントの大部分を見逃す可能性があります。</p>
+            </div>
+        </div>
+
+        <h2><span class="emoji">🚶‍♀️</span> STEP3:能古島上陸！<br>ノコズオーシャンはすぐ！</h2>
+        <div class="step">
+            <p><span class="emoji">🎉</span> 能古島に到着！「のこジルBBQ & フェス」の会場はすぐそこ！</p>
+            <p><span class="emoji">🏖️</span> 「<span class="highlight">ノコズオーシャン</span>」は、渡船場から歩いてすぐです。</p>
+            <ul>
+                <li><span class="emoji">➡️</span> 下船後、海沿いを少し歩きます。</li>
+                <li><span class="emoji">➡️</span> 徒歩で約5～7分ほどで到着します。<br>青い屋根の建物が目印！</li>
+            </ul>
+            <div class="time-info">
+                <p><span class="emoji">✅</span> <strong>到着目標！</strong></p>
+                <p>イベント開始時刻（15:30）とほぼ同時ですので、会場到着後は速やかに受付などをお済ませください。<br>時間に余裕を持ちたい場合は、これより1本早いフェリー（14:15姪浜発）のご利用もご検討ください。</p>
+            </div>
+            <div class="note">
+                <p><span class="emoji">🎶</span> 会場に着いたら、最高のロケーションとお酒を楽しみに！</p>
+            </div>
+        </div>
+
+        <div class="final-message">
+            <span class="emoji emoji-large">🎊</span>
+            <p>「のこジルBBQ&フェス」で<br>
+            楽しい一日をお過ごしください！</p>
+            <p style="font-size: 1.3em; margin-top:15px; font-weight: 500;"><span class="emoji">🎤</span><span class="emoji">🎧</span><span class="emoji">🌅</span><span class="emoji">✨</span></p>
+        </div>
+    </div>
+</body>
+</html>
